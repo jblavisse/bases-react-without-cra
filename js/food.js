@@ -1,5 +1,9 @@
-// const pizzaItem = React.createElement("li", {}, "Pizza");
-const pizzaItem = <li>Pizza</li>;
+function App() {
+    return (
+        <ul className="food">
+            <li>Pizza</li>
+        </ul>
+    )
+}
 
-// const foodList = React.createElement("ul",{className: "food"}, pizzaItem);
-const foodList = <ul className="food">{pizzaItem}</ul>;
+ReactDOM.render(<App/>, document.getElementById("root"));
