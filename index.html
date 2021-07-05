@@ -11,8 +11,9 @@
 
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-    <script>
+    <script type="text/babel">
         const title = React.createElement("h1",{className: "is-primary"}, "Bienvenue sur mon app React.JS");
         const section = React.createElement("section",{id:"services", className:"section"}, title);
         /*
@@ -21,7 +22,15 @@
         </section>
         */
 
-        ReactDOM.render(section, document.getElementById("root"));
+
+        /* Générer à partir de React.JS, une liste non ordonnée avec un seul item ("Pizza"). Cette liste non ordonnée aura la classe "food" */
+
+        // const pizzaItem = React.createElement("li", {}, "Pizza");
+        const pizzaItem = <li>Pizza</li>;
+        
+        const foodList = React.createElement("ul",{className: "food"}, pizzaItem);
+
+        ReactDOM.render(foodList, document.getElementById("root"));
     </script>
 </body>
 </html>
