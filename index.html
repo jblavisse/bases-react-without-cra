@@ -13,34 +13,6 @@
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-    <script type="text/babel">
-
-        function App() {
-            /*
-            const title = React.createElement("h1",{className: "is-primary"}, "Bienvenue sur mon app React.JS");
-            const section = React.createElement("section",{id:"services", className:"section"}, title);
-            */
-
-            return (
-                <section id="services" className="section">
-                    <h1 className="is-primary">Bienvenue sur mon app React.Js</h1>
-                </section>
-            )
-        }
-
-        ReactDOM.render(<App/>, document.getElementById("root"));
- 
-
-        /* Générer à partir de React.JS, une liste non ordonnée avec un seul item ("Pizza"). Cette liste non ordonnée aura la classe "food" */
-
-        // const pizzaItem = React.createElement("li", {}, "Pizza");
-        const pizzaItem = <li>Pizza</li>;
-        const age = 13;
-        
-        // const foodList = React.createElement("ul",{className: "food"}, pizzaItem);
-        const foodList = <ul className="food">{pizzaItem}</ul>;
-
-        
-    </script>
+    <script type="text/babel" src="js/example.js"></script>
 </body>
 </html>
