@@ -14,23 +14,33 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <script type="text/babel">
-        const title = React.createElement("h1",{className: "is-primary"}, "Bienvenue sur mon app React.JS");
-        const section = React.createElement("section",{id:"services", className:"section"}, title);
-        /*
-        <section id="services" class="section">
-            <h1 class="is-primary">Bienvenue sur mon app React.Js</h1>
-        </section>
-        */
 
+        function App() {
+            /*
+            const title = React.createElement("h1",{className: "is-primary"}, "Bienvenue sur mon app React.JS");
+            const section = React.createElement("section",{id:"services", className:"section"}, title);
+            */
+
+            return (
+                <section id="services" className="section">
+                    <h1 className="is-primary">Bienvenue sur mon app React.Js</h1>
+                </section>
+            )
+        }
+
+        ReactDOM.render(<App/>, document.getElementById("root"));
+ 
 
         /* Générer à partir de React.JS, une liste non ordonnée avec un seul item ("Pizza"). Cette liste non ordonnée aura la classe "food" */
 
         // const pizzaItem = React.createElement("li", {}, "Pizza");
         const pizzaItem = <li>Pizza</li>;
+        const age = 13;
         
-        const foodList = React.createElement("ul",{className: "food"}, pizzaItem);
+        // const foodList = React.createElement("ul",{className: "food"}, pizzaItem);
+        const foodList = <ul className="food">{pizzaItem}</ul>;
 
-        ReactDOM.render(foodList, document.getElementById("root"));
+        
     </script>
 </body>
 </html>
