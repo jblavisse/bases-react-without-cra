@@ -1,7 +1,13 @@
+function Item() {
+    return <li>Je suis un item</li>
+}
+
 function App() {
     return (
         <ul className="food">
-            <li>Pizza</li>
+            <Item/>
+            <Item/>
+            <Item/>
         </ul>
     )
 }
